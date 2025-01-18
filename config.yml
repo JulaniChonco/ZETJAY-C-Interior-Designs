@@ -1,0 +1,24 @@
+# Site settings
+title: "ZETJAY C Interior Designs"                  # Title of your site
+description: "Welcome to ZETJAY C Interior Design!"     # Description shown in search engines
+baseurl: ""                               # Leave empty for the root domain
+url: "https://julanichonco.github.io"             # Your custom domain or GitHub Pages URL
+
+# GitHub Pages settings
+theme: jekyll-theme-cayman                # Choose a Jekyll theme (optional)
+plugins:
+  - jekyll-feed                           # Adds an RSS feed (optional)
+  - jekyll-seo-tag                        # Improves SEO (optional)
+
+# Markdown settings
+markdown: kramdown
+
+# Optional Jekyll configurations
+permalink: pretty                         # Clean URLs (no .html at the end)
+paginate: 5                               # Number of posts per page (for blogs)
+
+# Exclusions (optional)
+exclude: ["README.md", "node_modules/"]   # Files and folders to ignore
+
+# Custom domain settings
+custom_url: "yourdomain.com"              # Replace with your custom domain

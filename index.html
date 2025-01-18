@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Designs Showcase</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .bg-block {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .testimonial {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #00796b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to ZET & JAY C Interior Designs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Message Section -->
+    <main id="home">
+        <section id="welcome" class="bg-block">
+            <h2>Your Dream Space Awaits!</h2>
+            <p>Explore our collection of exquisite interior designs, from elegant TV stands to stylish kitchen cabinets.</p>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase">
+            <h2>Featured Designs</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/Kitchen 1.jpg" alt="Kitchen Design" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/TV stand 1.jpg" alt="TV Stand Design" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/Kitchen 2.jpg" alt="Kitchen Design" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/TV stand 2.jpg" alt="TV Stand Design" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/TV stand 3.jpg" alt="TV Stand Design" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/Interior 1.jpg" alt="Interior Design" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonial">
+            <h3>What Our Clients Say</h3>
+            <p>"ZET & JAY C transformed my living space into a beautiful and functional area. Highly recommend their services!" - Jane D.</p>
+        </section>
+
+        <!-- Services Offered Section -->
+        <section class="bg-block">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Custom Interior Design</li>
+                <li>Space Planning</li>
+                <li>3D Visualization</li>
+                <li>Furniture Selection and Procurement</li>
+            </ul>
+        </section>
+
+        <!-- Newsletter Subscription Form -->
+        <section class="bg-block">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Preferences Form Section -->
+        <section class="bg-block">
+            <h2>What Types of Designs Would You Like to See?</h2>
+            <form>
+                <label><input type="radio" name="design-preference" value="modern"> Modern</label><br>
+                <label><input type="radio" name="design-preference" value="classic"> Classic</label><br>
+                <label><input type="radio" name="design-preference" value="minimalist"> Minimalist</label><br>
+            </form>
+        </section>
+
+        <!-- Table Section -->
+        <section class="table-container bg-block">
+            <h2>Design Categories</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Living Room</td>
+                        <td>Stylish and comfortable designs for your living space.</td>
+                    </tr>
+                    <tr>
+                        <td>Kitchen</td>
+                        <td>Modern layouts that enhance functionality and aesthetics.</td>
+                    </tr>
+                    <tr>
+                        <td>Bedroom</td>
+                        <td>Cozy and inviting designs for a restful environment.</td>
+                    </tr>
+                    <tr>
+                        <td>Office</td>
+                        <td>Professional and motivating workspace designs.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- External Links Section -->
+        <section class="bg-block">
+            <h2>Learn More</h2>
+            <p>Check out these resources for more inspiration:</p>
+            <ul>
+                <li><a href="https://www.architecturaldigest.com/" target="_blank">Architectural Digest</a></li>
+                <li><a href="mailto:info@zetandjayc.com">Email Us</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ZET & JAY C Interior Designs. All rights reserved.</p>
+        <p><a href="https://www.papilloninteriors.co.za/" target="_blank">Visit Papillon Interiors</a></p>
+    </footer>
+
+    <!-- Slideshow Script -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body>
+</html>
+
